@@ -4,17 +4,6 @@ nextRouting:
     name:
       defaultLambda: DefaultLambda #Default Lambda의 이름 설정
       imageLambda: ImageLambda # Image Lambda의 이름 설정
-    bucketRegion: "ap-southeast-1" # S3 Bucket 지역 설정
+    bucketRegion: "ap-southeast-2" # S3 Bucket 지역 설정
     cloudfront:
       comment: "next routing" # CloudFront 설명 설정
-      api/*:
-        minTTL: 10
-        maxTTL: 10
-        defaultTTL: 10
-        forward:
-          headers:
-            [
-              CloudFront-Viewer-Country,
-              CloudFront-Viewer-City,
-              CloudFront-Viewer-Country-Region,
-            ]
