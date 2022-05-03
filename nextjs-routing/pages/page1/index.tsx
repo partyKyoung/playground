@@ -14,7 +14,7 @@ export const getServerSideProps = ({ query }: GetServerSidePropsContext) => ({
     country: query.country,
     region: query.region,
     city: query.city,
-    forbidden: query.country === "KR",
+    forbidden: query.country !== "KR",
   },
 });
 
